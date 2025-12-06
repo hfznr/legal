@@ -2,12 +2,11 @@
   "version": 2,
   "name": "brideio-legal",
   "builds": [
-    {
-      "src": "policies/**/*",
-      "use": "@vercel/static"
-    }
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "legal/policies/**/*", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/policies/(.*)", "dest": "/policies/$1" }
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/policies/(.*)", "dest": "/legal/policies/$1" }
   ]
 }
