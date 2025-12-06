@@ -3,10 +3,10 @@
   "name": "brideio-legal",
   "builds": [
     { "src": "index.html", "use": "@vercel/static" },
-    { "src": "legal/policies/**/*", "use": "@vercel/static" }
+    { "src": "policies/**/*", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/", "dest": "/index.html" },
-    { "src": "/policies/(.*)", "dest": "/legal/policies/$1" }
+    { "src": "/policies/(.*)", "dest": "/policies/$1" }
   ]
 }
